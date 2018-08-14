@@ -36,7 +36,7 @@ function shuffle(array) {
 
 //jQuery function for card click
 $('.card').click(function() {
-	if(!($(this).hasClass('open') || $(this).hasClass('match'))){
+	if(!($(this).hasClass('open') || $(this).hasClass('match')) && $('.open').length < 2){
 		moves++;
 	    $('.moves').text(moves);
 		check_stars();
